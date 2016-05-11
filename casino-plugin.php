@@ -12,6 +12,8 @@ Plugin Type: Piklist
 License: GPL2
 */
 
+define( 'SHOWS_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+
 /**
  * Check if Piklist is activated and installed
  */

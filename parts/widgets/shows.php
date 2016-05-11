@@ -11,7 +11,9 @@
  * Time: 7:49 PM
  */
 
-wp_enqueue_script( 'scripts', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.bootstrap.newsbox.min.js', array( 'jquery' ), null, true );
+
+wp_enqueue_script( 'casino-shows', SHOWS_PLUGIN_PATH.'assets/js/jquery.bootstrap.newsbox.min.js', array( 'jquery' ), null, true );
+wp_enqueue_script( 'casino-news', SHOWS_PLUGIN_PATH.'assets/js/newsticker.js', array( 'jquery' ), null, true );
 
 /*if ( is_active_widget( false, false, $this->id_base, true ) ) {
     // Scripts from News Ticker
@@ -74,7 +76,7 @@ if ($loop->have_posts()) {
     $x = 0;
     ?>
 
-    <ul id="shows" class="list-unstyled">
+    <ul id="casino-shows" class="casino-shows list-unstyled">
         <?php
         while ($loop->have_posts()) : $loop->the_post();
             $fechatexto = "";
