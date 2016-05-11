@@ -3,7 +3,7 @@
 Plugin Name: IMGD Casino
 Plugin URI: http://imgdigital.com.ar/portfolio/projects/casino-de-buenos-aires/
 Description: Este es un Plug-in para el sitio del Casino de Buenos Aires
-Version: 1.1
+Version: 1.1.1
 Author: Federico Reinoso
 Author URI: http://imgdigital.com.ar
 Text Domain: imgd

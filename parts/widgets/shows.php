@@ -1,15 +1,22 @@
 <?php
 /**
  * Title: Shows
- * Class: custom-class-1 custom-class-2
+ * Class: newsTicker
  * Width: 500
  *
  *
- * Widget para mostarr los próximos Shows
+ * Widget para mostrar los próximos Shows
  * User: bicho44
  * Date: 2/23/16
  * Time: 7:49 PM
  */
+
+
+if ( is_active_widget( false, false, $this->id_base, true ) ) {
+    // Scripts from News Ticker
+    wp_enqueue_script( 'scripts', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.bootstrap.newsbox.min.js', array( 'jquery' ), null, true );
+
+}
 
 //piklist::pre($settings);
 
@@ -91,13 +98,8 @@ if ($loop->have_posts()) {
                 if ($hora!=="") {
                     $fechatexto .= ' a las '. $hora;
                 }
-
-
-
                 //piklist::pre($salon);
-
                 ?>
-
                 <?php
                 if (has_post_thumbnail()) { ?>
                     <a href="<?php echo get_permalink(); ?>">
@@ -116,8 +118,6 @@ if ($loop->have_posts()) {
                     ?>
                 </a>
                 <?php //the_title( sprintf( '<h3><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-
-
 
                 <!--               <a href='#' class='btn btn-primary btn-small'>Reservá tu mesa ahora</a>-->
 
