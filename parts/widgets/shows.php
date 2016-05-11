@@ -11,12 +11,13 @@
  * Time: 7:49 PM
  */
 
+wp_enqueue_script( 'scripts', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.bootstrap.newsbox.min.js', array( 'jquery' ), null, true );
 
-if ( is_active_widget( false, false, $this->id_base, true ) ) {
+/*if ( is_active_widget( false, false, $this->id_base, true ) ) {
     // Scripts from News Ticker
     wp_enqueue_script( 'scripts', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.bootstrap.newsbox.min.js', array( 'jquery' ), null, true );
 
-}
+}*/
 
 //piklist::pre($settings);
 
