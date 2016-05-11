@@ -75,7 +75,9 @@ $loop = new WP_Query($args);
 if ($loop->have_posts()) {
     $x = 0;
     ?>
-
+    <div class="panel panel-default">
+    <div class="panel-heading"><span class="glyphicon glyphicon-list-alt"></span><b>News</b></div>
+    <div class="panel-body">
     <ul id="casino-shows" class="casino-shows list-unstyled">
         <?php
         while ($loop->have_posts()) : $loop->the_post();
@@ -134,6 +136,9 @@ if ($loop->have_posts()) {
         endwhile;
         ?>
     </ul>
+    </div>
+        <div class="panel-footer"></div>
+    </div>
 <?php } ?>
 <?php wp_reset_query();
 
